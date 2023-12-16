@@ -14,19 +14,19 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.devx.pdf_viewer_kmp.PdfViewModel
 import com.rizzi.bouquet.ResourceType
 import com.rizzi.bouquet.VerticalPDFReader
 import com.rizzi.bouquet.rememberVerticalPdfReaderState
+import org.koin.androidx.compose.getViewModel
 import kotlin.io.encoding.Base64
 import kotlin.io.encoding.ExperimentalEncodingApi
 
 @OptIn(ExperimentalEncodingApi::class)
 @Composable
-fun App() {
+fun PdfViewerScreen() {
     MyApplicationTheme {
-        val pdfViewModel: PdfViewModel = viewModel()
+        val pdfViewModel: PdfViewModel = getViewModel()
         val pdfData by pdfViewModel.pdfData.collectAsState()
 
         Column(

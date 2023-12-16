@@ -11,7 +11,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            App()
+            PdfViewerScreen()
         }
     }
 }
@@ -20,6 +20,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 private fun AppAndroidPreview() {
     MyApplicationTheme {
-        App()
+        PdfViewerScreen()
     }
 }

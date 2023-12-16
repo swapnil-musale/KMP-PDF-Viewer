@@ -43,10 +43,12 @@ kotlin {
 
             api(libs.moko.mvvm.core)
             api(libs.moko.mvvm.flow)
+            implementation(libs.koin.core)
         }
 
         androidMain.dependencies {
             api(libs.moko.mvvm.flow.compose)
+            api(libs.koin.android)
         }
 
         iosMain.dependencies {
