@@ -1,3 +1,5 @@
 package com.devx.pdf_viewer_kmp
 
-class PdfViewModel
+import dev.icerock.moko.mvvm.viewmodel.ViewModel
+
+class PdfViewModel : ViewModel()

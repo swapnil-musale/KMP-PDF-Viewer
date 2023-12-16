@@ -23,17 +23,34 @@ kotlin {
         ios.deploymentTarget = "16.0"
         podfile = project.file("../iosApp/Podfile")
         framework {
-            baseName = "shared"
-            isStatic = true
+            baseName = "MultiPlatformLibrary"
+            isStatic = false
+            export(libs.moko.mvvm.core)
+            export(libs.moko.mvvm.flow)
         }
     }
 
     sourceSets {
-        commonMain.dependencies {
-            // put your multiplatform dependencies here
+        all {
+            languageSettings.optIn("kotlinx.cinterop.ExperimentalForeignApi")
         }
-        commonTest.dependencies {
-            implementation(libs.kotlin.test)
+
+        commonMain.dependencies {
+            implementation(libs.kotlinx.coroutines.core)
+            implementation(libs.ktor.client.core)
+            implementation(libs.ktor.client.content.negotiation)
+            implementation(libs.ktor.serialization.kotlinx.json)
+
+            api(libs.moko.mvvm.core)
+            api(libs.moko.mvvm.flow)
+        }
+
+        androidMain.dependencies {
+            api(libs.moko.mvvm.flow.compose)
+        }
+
+        iosMain.dependencies {
+            implementation(libs.ktor.client.darwin)
         }
     }
 }

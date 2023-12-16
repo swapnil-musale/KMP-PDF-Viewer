@@ -8,14 +8,14 @@
   "authors": "",
   "license": "",
   "summary": "Some description for the Shared Module",
-  "vendored_frameworks": "build/cocoapods/framework/shared.framework",
+  "vendored_frameworks": "build/cocoapods/framework/MultiPlatformLibrary.framework",
   "libraries": "c++",
   "platforms": {
     "ios": "16.0"
   },
   "pod_target_xcconfig": {
     "KOTLIN_PROJECT_PATH": ":shared",
-    "PRODUCT_MODULE_NAME": "shared"
+    "PRODUCT_MODULE_NAME": "MultiPlatformLibrary"
   },
   "script_phases": [
     {
