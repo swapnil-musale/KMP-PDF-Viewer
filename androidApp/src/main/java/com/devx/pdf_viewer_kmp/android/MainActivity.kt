@@ -5,6 +5,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import com.devx.pdf_viewer_kmp.android.theme.AppTheme
+import com.devx.pdf_viewer_kmp.android.ui.PdfViewerScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +21,7 @@ class MainActivity : ComponentActivity() {
 @Preview
 @Composable
 private fun AppAndroidPreview() {
-    MyApplicationTheme {
+    AppTheme {
         PdfViewerScreen()
     }
 }

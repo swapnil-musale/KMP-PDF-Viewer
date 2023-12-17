@@ -6,6 +6,6 @@ import org.koin.dsl.module
 
 actual fun getViewModelByPlatform() = module {
     viewModel {
-        PdfViewModel()
+        PdfViewModel(apiService = get())
     }
 }

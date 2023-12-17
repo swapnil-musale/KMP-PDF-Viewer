@@ -1,27 +1,29 @@
 package com.devx.pdf_viewer_kmp
 
+import com.devx.pdf_viewer_kmp.network.ApiService
 import dev.icerock.moko.mvvm.flow.cMutableStateFlow
 import dev.icerock.moko.mvvm.flow.cStateFlow
 import dev.icerock.moko.mvvm.viewmodel.ViewModel
-import io.ktor.client.call.body
-import io.ktor.client.request.get
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
-class PdfViewModel : ViewModel() {
+class PdfViewModel(private val apiService: ApiService) : ViewModel() {
 
-    private val _pdfData = MutableStateFlow<ByteArray?>(null).cMutableStateFlow()
-    val pdfData = _pdfData.asStateFlow().cStateFlow()
+    private val _uiState =
+        MutableStateFlow<PdfUiState>(PdfUiState.Uninitialized).cMutableStateFlow()
+    val uiState = _uiState.asStateFlow().cStateFlow()
 
     fun downloadPDF() {
+        _uiState.value = PdfUiState.Loading
         viewModelScope.launch {
-            val response = httpClient
-                .get("https://www.clickdimensions.com/links/TestPDFfile.pdf")
-                .body<ByteArray>()
-
-            _pdfData.value = response
+            try {
+                val response = apiService.getPdfData()
+                _uiState.value = PdfUiState.Success(pdfData = response)
+            } catch (e: Exception) {
+                _uiState.value = PdfUiState.Error(exceptionMessage = e.message.orEmpty())
+            }
         }
     }
 
