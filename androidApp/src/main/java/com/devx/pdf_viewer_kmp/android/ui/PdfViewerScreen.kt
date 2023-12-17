@@ -8,19 +8,19 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.devx.pdf_viewer_kmp.PdfUiState
 import com.devx.pdf_viewer_kmp.PdfViewModel
 import com.devx.pdf_viewer_kmp.android.theme.AppTheme
 import com.rizzi.bouquet.ResourceType
 import com.rizzi.bouquet.VerticalPDFReader
 import com.rizzi.bouquet.rememberVerticalPdfReaderState
+import io.ktor.util.encodeBase64
 import org.koin.androidx.compose.getViewModel
-import kotlin.io.encoding.Base64
 import kotlin.io.encoding.ExperimentalEncodingApi
 
 @OptIn(ExperimentalEncodingApi::class)
@@ -28,7 +28,7 @@ import kotlin.io.encoding.ExperimentalEncodingApi
 fun PdfViewerScreen() {
     AppTheme {
         val pdfViewModel: PdfViewModel = getViewModel()
-        val uiState by pdfViewModel.uiState.collectAsState()
+        val uiState by pdfViewModel.uiState.collectAsStateWithLifecycle()
 
         Column(
             modifier = Modifier.fillMaxSize(),
@@ -49,9 +49,9 @@ fun PdfViewerScreen() {
                 }
 
                 is PdfUiState.Success -> {
-                    val pdfData = (uiState as PdfUiState.Success).pdfData
+                    val pdfData = (uiState as PdfUiState.Success).pdfData.encodeBase64()
                     val pdfState = rememberVerticalPdfReaderState(
-                        resource = ResourceType.Base64(Base64.encode(pdfData, 0)),
+                        resource = ResourceType.Base64(pdfData),
                         isZoomEnable = true,
                     )
 
