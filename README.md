@@ -7,7 +7,7 @@ The PDF Viewer is simple app which demonstrates how we can display PDF in androi
 ### Screenshots
 ### Android App
 
-<table style="width:100%">
+<table style="width:100">
   <tr>
     <th>Android</th> 
   </tr>
@@ -18,12 +18,12 @@ The PDF Viewer is simple app which demonstrates how we can display PDF in androi
 
 ### iOS App
 
-<table style="width:100%">
+<table style="width:100">
   <tr>
     <th>iOS</th> 
   </tr>
   <tr>
-    <td><video src = "https://github.com/swapnil-musale/KMP-PDF-Viewer/assets/15209914/4471976e-85dd-4d73-bb59-1a05ebb643f0" width=250/></td>
+    <td><video src = "https://github.com/swapnil-musale/KMP-PDF-Viewer/assets/15209914/d26452a3-d365-4c58-8224-92c80251118c" width=250/></td>
   </tr>
 </table>
 
@@ -33,9 +33,9 @@ The PDF Viewer is simple app which demonstrates how we can display PDF in androi
 - [Kotlin Multiplatform](https://kotlinlang.org/docs/multiplatform.html) : To host the common bussiness logic of Android and iOS app.
 - [Jetpack Compose](https://developer.android.com/jetpack/compose) : Android App UI built using Jetpack Compose.
 - [Swift UI](https://developer.apple.com/xcode/swiftui/) : iOS App UI built using Swift UI.
+- [Moko MVVM](https://github.com/icerockdev/moko-mvvm) : Share ViewModel with android and iOS app.
 - [DI](https://insert-koin.io/) : Koin used for Dependency Injection.
 - [Networking](https://ktor.io/) : Ktor used for network calls.
-
 
 ## Project structure
 
