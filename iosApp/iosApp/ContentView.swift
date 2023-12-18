@@ -38,18 +38,10 @@ struct ContentView: View {
 struct preparePdfView: View {
     let pdfData = Data(base64Encoded: "")
     var body: some View {
-        Text("PDF Data")
+        Text("Display PDF")
 //        let pdfView = PDFView()
 //        var doc = PdfDocument(pdfData);
 //        pdfView.document = doc
-    }
-}
-
-struct ButtonView: View {
-    var body: some View {
-        Button("Download PDF") {
-            
-        }
     }
 }
 

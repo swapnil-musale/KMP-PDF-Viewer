@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
 
 @Preview
 @Composable
-private fun AppAndroidPreview() {
+private fun PdfViewerScreenPreview() {
     AppTheme {
         PdfViewerScreen()
     }
