@@ -1,7 +1,7 @@
-package com.devx.pdf_viewer_kmp.android
+package com.devx.pdfviewerkmp.android
 
 import android.app.Application
-import com.devx.pdf_viewer_kmp.di.getSharedModules
+import com.devx.pdfviewerkmp.di.getSharedModules
 import org.koin.core.context.startKoin
 
 class MyApp : Application() {

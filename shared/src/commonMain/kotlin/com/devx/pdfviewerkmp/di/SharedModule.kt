@@ -1,4 +1,4 @@
-package com.devx.pdf_viewer_kmp.di
+package com.devx.pdfviewerkmp.di
 
 private val sharedModules = listOf(getViewModelByPlatform(), getNetworkModule())
 

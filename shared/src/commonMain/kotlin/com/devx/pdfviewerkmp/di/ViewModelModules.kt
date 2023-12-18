@@ -1,4 +1,4 @@
-package com.devx.pdf_viewer_kmp.di
+package com.devx.pdfviewerkmp.di
 
 import org.koin.core.module.Module
 

@@ -4,10 +4,10 @@ plugins {
 }
 
 android {
-    namespace = "com.devx.pdf_viewer_kmp.android"
+    namespace = "com.devx.pdfviewerkmp.android"
     compileSdk = 34
     defaultConfig {
-        applicationId = "com.devx.pdf_viewer_kmp.android"
+        applicationId = "com.devx.pdfviewerkmp.android"
         minSdk = 21
         targetSdk = 34
         versionCode = 1

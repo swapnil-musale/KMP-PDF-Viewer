@@ -1,6 +1,6 @@
-package com.devx.pdf_viewer_kmp.di
+package com.devx.pdfviewerkmp.di
 
-import com.devx.pdf_viewer_kmp.PdfViewModel
+import com.devx.pdfviewerkmp.PdfViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 

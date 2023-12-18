@@ -1,6 +1,6 @@
-package com.devx.pdf_viewer_kmp
+package com.devx.pdfviewerkmp
 
-import com.devx.pdf_viewer_kmp.network.ApiService
+import com.devx.pdfviewerkmp.network.ApiService
 import dev.icerock.moko.mvvm.flow.cMutableStateFlow
 import dev.icerock.moko.mvvm.flow.cStateFlow
 import dev.icerock.moko.mvvm.viewmodel.ViewModel

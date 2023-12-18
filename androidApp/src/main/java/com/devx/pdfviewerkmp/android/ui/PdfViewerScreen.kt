@@ -1,4 +1,4 @@
-package com.devx.pdf_viewer_kmp.android.ui
+package com.devx.pdfviewerkmp.android.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -13,9 +13,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.devx.pdf_viewer_kmp.PdfUiState
-import com.devx.pdf_viewer_kmp.PdfViewModel
-import com.devx.pdf_viewer_kmp.android.theme.AppTheme
+import com.devx.pdfviewerkmp.PdfUiState
+import com.devx.pdfviewerkmp.PdfViewModel
+import com.devx.pdfviewerkmp.android.theme.AppTheme
 import com.rizzi.bouquet.ResourceType
 import com.rizzi.bouquet.VerticalPDFReader
 import com.rizzi.bouquet.rememberVerticalPdfReaderState

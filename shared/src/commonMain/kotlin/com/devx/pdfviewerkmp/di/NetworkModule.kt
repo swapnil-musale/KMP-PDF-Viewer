@@ -1,7 +1,7 @@
-package com.devx.pdf_viewer_kmp.di
+package com.devx.pdfviewerkmp.di
 
-import com.devx.pdf_viewer_kmp.network.ApiService
-import com.devx.pdf_viewer_kmp.network.httpClient
+import com.devx.pdfviewerkmp.network.ApiService
+import com.devx.pdfviewerkmp.network.httpClient
 import io.ktor.client.HttpClient
 import org.koin.dsl.module
 

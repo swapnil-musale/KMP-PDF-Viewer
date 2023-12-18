@@ -1,4 +1,4 @@
-package com.devx.pdf_viewer_kmp.network
+package com.devx.pdfviewerkmp.network
 
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body

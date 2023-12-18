@@ -1,4 +1,4 @@
-package com.devx.pdf_viewer_kmp.android.theme
+package com.devx.pdfviewerkmp.android.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.shape.RoundedCornerShape

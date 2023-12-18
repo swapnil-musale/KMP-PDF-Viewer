@@ -58,7 +58,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.devx.pdf_viewer_kmp"
+    namespace = "com.devx.pdfviewerkmp"
     compileSdk = 34
     defaultConfig {
         minSdk = 21
