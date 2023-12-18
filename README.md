@@ -1,11 +1,10 @@
 # PDF Viewer
-The PDF Viewer is simple app which demonstrates how we can display PDF in android and iOS platform in **Kotlin Multiplatform** app.
+The PDF Viewer is simple app which demonstrates how we can display PDF in android and iOS platform in **Kotlin Multiplatform** project.
 
 | Platforms | ![](https://img.shields.io/badge/Android-black.svg?style=for-the-badge&logo=android) ![](https://img.shields.io/badge/iOS-black.svg?style=for-the-badge&logo=apple)  |
 |-----------|---|
 
-### Screenshots
-### Android App
+### Demo
 
 <table style="width:100">
   <tr>
