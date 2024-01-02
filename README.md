@@ -22,9 +22,10 @@ The PDF Viewer is simple app which demonstrates how we can display PDF in androi
     <th>iOS</th> 
   </tr>
   <tr>
-    <td><video src = "https://github.com/swapnil-musale/KMP-PDF-Viewer/assets/15209914/d26452a3-d365-4c58-8224-92c80251118c" width=250/></td>
+    <td><video src = "https://github.com/swapnil-musale/KMP-PDF-Viewer/assets/15209914/90b19f45-f88b-493b-89da-9ec2bce73bc9" width=250/></td>
   </tr>
 </table>
+
 
 ## Built with
 
