@@ -21,7 +21,10 @@ struct ContentView: View {
             case is PdfUiStateLoading:
                 LoadingView()
             case let successState as PdfUiStateSuccess:
-                preparePdfView()
+                let pdfData: String = (successState as PdfUiStateSuccess).encodedBase64Data
+                if let data = Data(base64Encoded: pdfData) {
+                    PDFViewer(data: data).edgesIgnoringSafeArea(.all)
+                }
             case is PdfUiStateError:
                 ErrorView()
             default:

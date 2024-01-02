@@ -8,7 +8,10 @@ import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import kotlin.io.encoding.Base64
+import kotlin.io.encoding.ExperimentalEncodingApi
 
+@OptIn(ExperimentalEncodingApi::class)
 class PdfViewModel(private val apiService: ApiService) : ViewModel() {
 
     private val _uiState =
@@ -20,7 +23,10 @@ class PdfViewModel(private val apiService: ApiService) : ViewModel() {
         viewModelScope.launch {
             try {
                 val response = apiService.getPdfData()
-                _uiState.value = PdfUiState.Success(pdfData = response)
+                _uiState.value = PdfUiState.Success(
+                    pdfData = response,
+                    encodedBase64Data = Base64.encode(response)
+                )
             } catch (e: Exception) {
                 _uiState.value = PdfUiState.Error(exceptionMessage = e.message.orEmpty())
             }

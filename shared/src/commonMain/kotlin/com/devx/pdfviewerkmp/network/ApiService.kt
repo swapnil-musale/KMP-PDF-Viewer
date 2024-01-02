@@ -7,6 +7,6 @@ import io.ktor.client.request.get
 class ApiService(private val httpClient: HttpClient) {
 
     suspend fun getPdfData(): ByteArray {
-        return httpClient.get("TestPDFfile.pdf").body<ByteArray>()
+        return httpClient.get("file-example_PDF_1MB.pdf").body<ByteArray>()
     }
 }

@@ -7,7 +7,7 @@ import io.ktor.serialization.kotlinx.json.json
 
 val httpClient = HttpClient {
     defaultRequest {
-        url("https://www.clickdimensions.com/links/")
+        url("https://file-examples.com/storage/fe3666494365908ae9beb40/2017/10/")
     }
     install(ContentNegotiation) {
         json()
