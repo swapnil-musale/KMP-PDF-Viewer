@@ -1,8 +1,8 @@
 [versions]
-agp = "8.2.0"
-kotlin = "1.9.21"
+agp = "8.2.1"
+kotlin = "1.9.22"
 compose = "1.5.4"
-compose-compiler = "1.5.6"
+compose-compiler = "1.5.7"
 compose-material3 = "1.1.2"
 androidx-activityCompose = "1.8.2"
 coroutinesVersion = "1.7.3"
@@ -11,7 +11,7 @@ ktorVersion = "2.3.7"
 composeViewModel = "2.6.2"
 bouquet = "1.1.2"
 mokoViewmodel = "0.16.1"
-koin = "3.5.0"
+koin = "3.5.3"
 
 [libraries]
 # Compose
